@@ -1,0 +1,694 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap'); /* Importer Google Fonts */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'); /* Importer Font Awesome */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Nunito', sans-serif;
+}
+
+:root {
+    --bg-color: #191f36;
+    --snd-bg-color: #262B40; 
+    --text-color: #fff;
+    --main-color: #59B2F4;
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px pour une meilleure adaptabilité */
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0; 
+    width: 100%; /* S'assure que l'en-tête couvre toute la largeur */
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ajout d'une ombre pour plus de clarté */
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 700;
+    cursor: default;
+}
+
+.navbar a {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 700;
+    transition: color 0.3s ease; /* Ajout d'une transition pour les survols */
+}
+
+.navbar a:hover
+ {
+    color: var(--main-color); /* Utilisation de la couleur principale pour le survol */
+}
+
+#menu-icon {
+    font-size: 3.6rem; 
+    color: var(--text-color);
+    cursor: pointer;
+    display: none; /* Par défaut masqué sur les grandes écrans */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        display: none; /* Masque la navigation sur mobile */
+        flex-direction: column;
+        background: var(--snd-bg-color);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    .navbar a {
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    .navbar.active {
+        display: flex; /* Affiche la navigation lorsque le menu est ouvert */
+    }
+
+    #menu-icon {
+        display: block; /* Affiche l'icône sur mobile */
+    }
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+}
+
+ span {
+    color: var(--main-color);   
+} 
+
+.home-content h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-img img {
+    width: 25vw;
+    height: 25vw; /* Assure une hauteur égale pour le cercle */
+    border-radius: 50%; /* Crée un cercle */
+    object-fit: cover; /* Ajuste l'image pour remplir le cercle */
+    object-position: center 10%; /* Lève légèrement la photo en ajustant la position */
+    animation: floatImage 4s ease-in-out infinite;
+    border: 5px solid var(--main-color); /* Ajout d'une bordure stylée */
+}
+.home-content p{
+ font: size 1.6rem;   
+}
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: 0.2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: #fff; /* Maintenir la couleur initiale définie */
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.5s ease;
+}
+
+.social-media {
+    color: #fff; /* Définir la couleur pour les icônes spécifiques */
+}
+
+.social-media a:hover {
+    background: var(--main-color);
+    color: var(--snd-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+.paragraph {
+    font-size: 1.9rem; 
+    line-height: 1.5; 
+}
+.about {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--main-color);
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.about h2 {
+    font-size: 4rem; 
+    color: var(--main-color);
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem; /* l'espace entre les items */
+}
+
+.about-item {
+    display: flex;
+    align-items: center;
+    max-width: 900px; /* Conteneurs un peu plus petits */
+    background: var(--main-color);
+    border-radius: 1rem;
+    padding: 2.5rem; /* Réduit légèrement le padding interne */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Ombre légèrement plus visible */
+}
+
+.about-img {
+    height: 220px;
+    border-radius: 0;
+    object-fit: cover;
+    margin-right: 4rem; /* Plus d'espace entre l'image et le texte */
+}
+
+.about-text {
+    font-size: 1.7rem; /* Texte reste grand */
+    line-height: 2; /* Ligne plus espacée */
+    color: black;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .about-item {
+        flex-direction: column; /* Images et textes en colonne */
+        text-align: center;
+    }
+
+    .about-img {
+        margin: 0 0 2rem; /* Espace autour des images sur petits écrans */
+    }
+
+    .about {
+        align-items: center; /* Centre les items pour petits écrans */
+    }
+}
+
+
+/* Section for Competences */
+.competence {
+    margin-top: 30px;
+    text-align: center;
+    padding: 0 20px; /* Ajuste le padding pour le centrage horizontal */
+    position: relative;
+    z-index: 1; /* Assure que la section reste au-dessus */
+}
+
+.competence h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--main-color); /* Couleur de texte principale */
+    margin-bottom: 20px;
+    padding-left: 0; /* Enlève l'espacement par défaut du côté gauche */
+    text-transform: uppercase; /* Mettre le titre en majuscules pour le mettre en avant */
+    margin-top: 100px; /* Ajoute un espace sous la navbar */
+}
+
+.competence h2 {
+    font-size: 24px;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.competence p span img {
+    width: 20px; /* Ajuste la taille des images selon vos besoins */
+    height: 20px;
+    margin-right: 5px; /* Espace entre l'image et le texte */
+}
+
+.competence .skill-logo {
+    width: 60px; /* Ajuste la taille des images */
+    height: 60px;
+    margin: 10px; /* Espacement entre les images */
+    border-radius: 8px; /* Corners arrondis */
+    border: 1px solid #ddd; /* Pour un cadre léger autour des images */
+}
+.competences-box{
+padding: 20PX 30PX;
+}
+
+
+/* Section for Passions */
+
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#passion h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--main-color);
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.passion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.passion h2 {
+    font-size: 28px;
+    color:  var(--main-color);
+    flex: 1 1 100%; /* Passe en dessous pour les petits écrans */
+}
+
+.passion p {
+    flex: 2 1 60%; /* Donne plus de place au texte */
+    text-align: left; /* Alignement à droite pour le paragraphe */
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.passion .icons {
+    flex: 1 1 40%; /* Passe en dessous pour les petits écrans */
+    display: flex;
+    justify-content: space-around;
+    gap: 15px; /* Espacement entre les images */
+    
+}
+
+.passionlogo {
+    width: 90px;
+    height: 100px;
+    border-radius: 10px;
+    border: 2px solid #555; /* Cadre plus foncé pour les images */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+hr {
+    margin: 30px 0;
+    border: 0;
+    border-top: 2px solid #73afdf; /* Ligne horizontale en bleu */
+}
+/* Section for Expérience */
+
+#experience h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--main-color);
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+/* Texte en ligne (sans retour à la ligne) */
+.inline-text {
+    white-space: nowrap;
+    font-size: 16px;
+    line-height: 1.8;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.inline-text strong {
+    color:var(--main-color); /*couleur des titres */
+    font-weight: bold;
+}
+
+.stage-description p{
+    font-size: 16px;
+    line-height: 1.8;
+    color: white;
+    margin-bottom: 10px;
+
+}
+/* Centrer l'image dans la secton*/
+.image-container {
+    text-align: center;
+}
+
+.image-container img {
+    width: 20%;
+    height: 40%;
+    border-radius: 10px;
+    border: 2px solid #555; /* Cadre plus foncé pour les images */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+/* Section for Contact */
+.contact h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--main-color);
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.contact form .input-box{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color:var(--text-color);
+    background:var(--snd-bg-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+.contact form .input-box input{
+    width: 49%;
+}
+.contact form textarea{
+    resize: none;
+}
+.contact form .btn{
+    margin-top: 2rem;
+    cursor:pointer;
+}
+.btn{
+    display:inline-block;
+    padding:1rel 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size:1.6rem;
+    color:var(--bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+.btn:hover{
+    box-shadow: none;
+}
+
+/* Section for competences */
+
+#competences h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--main-color);
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.competences {
+    background: var(--bg-color);
+    color :black;   
+}
+.competences-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+.competences-box{
+    background-color: var(--main-color);
+    height: 300px;
+    border-radius: 3rem;
+    border: 5px solid transparent;
+    cursor:pointer;
+    transition: 0.4s ease-in-out;
+}
+.competences-box .competences-info{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-height: 200px;
+    justify-content: left;
+    align-items: baseline;
+    padding:5rel 5rem;
+}
+.competences-info h4{
+  font-size: 2rem;  
+  font-weight: 800;
+  line-height: 2;
+}
+.competences-info .iconss{
+    font-size: 1.6rem;
+    font-weight: 600;
+    max-height: 100px;
+    line-height:1.7 ;
+    margin:auto;
+
+}
+/* Style général pour les listes */
+.liste ul {
+    list-style-type: disc; /* Ajoute des points */
+    padding-left: 20px; /* Espace entre le bord et les points */
+    margin: 0;
+}
+
+/* Style des éléments des listes */
+.liste ul li {
+    font-size: 20px; /* Agrandit le texte des éléments */
+    line-height: 1.8; /* Espace entre les lignes */
+    color: #333; /* Couleur du texte */
+}
+
+/* Section for projets */
+#projet h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--main-color);
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.my-photo {
+    width: 400px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .flex-section {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: space-between; /* Adds space between the items */
+    gap: 20px; /* Adds spacing between the elements */
+    padding: 20px;
+  }
+  
+.flex-section p {
+    flex: 2 1 60%; /* Donne plus de place au texte */
+    text-align: left; /* Alignement à droite pour le paragraphe */
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* Styles pour le quiz */
+.quiz-container {
+    max-width: 600px;
+    margin: 100px auto; /* Réduire l'espacement de la marge */
+    padding: 50px;
+    border-radius: 15px;
+    background-color: #444; /* Changer la couleur d'arrière-plan */
+}
+.quiz-container h1 {
+    font-size: 2.5rem; /* Taille de police */
+    font-weight: bold; /* Gras */
+    text-align: center; /* Centré */
+    margin-bottom: 20px; /* Espace en bas */
+    color: var(--main-color) /* Couleur de texte */
+}
+
+
+.question {
+    margin: 30px 0; /* Réduire l'espacement entre les questions */
+}
+
+.question P {
+    font-size: 2.5rem; /* Réduire davantage la taille de la police des questions */
+    
+}
+
+.question label {
+    margin-right: 15px;
+    font-size: 2rem; /* Augmenter légèrement la taille de la police des réponses */
+    
+}
+
+button {
+    background-color: #59a5d8;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem; /* Augmenter la taille de la police du bouton */
+}
+
+button:hover {
+    background-color: #4a96c1;
+}
+
+.result {
+    margin-top: 20px;
+    display: none;
+}
+
+#correctAnswers {
+    list-style-type: none;
+    padding: 0;
+}
+
+.input-mail, textarea {
+    width: 95%;
+    padding: 14px 22px;
+    border-radius: 12px;
+    margin: 5px 0;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: #73afdf; /* Changer la couleur du lien */
+}
+.result{
+    margin: 10px auto;
+    border-radius: 10px;
+    background-color: #444;
+    padding: 10px;
+    width: 600px ;
+}
+.result  li{
+    font-size: medium;
+    padding: 5px;
+}
+.result h3 {
+    font-size: 23px;
+    padding: 5px;
+}
+/* section for iit */
+#iit h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--main-color); /* Couleur de texte principale */
+    margin-bottom: 20px;
+    padding-left: 0; /* Enlève l'espacement par défaut du côté gauche */
+    text-transform: uppercase; /* Mettre le titre en majuscules pour le mettre en avant */
+    margin-top: 20px; /* Ajoute un espace sous la navbar */
+    text-align: center;
+
+}
+/* Style pour le paragraphe */
+article p {
+    font-family: Arial, sans-serif;
+    font-size: 18px; 
+    line-height: 1.6; /* Espacement entre les lignes */
+    color: white; 
+    text-align: justify; 
+    margin: 20px 0; /* Espacement autour du paragraphe */
+    padding: 10px; /* Espacement intérieur */
+    
+}
+/* Style pour la vidéo */
+.iit-vd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.iit-vd video {
+    width: 100%;
+    max-width: 800px; 
+    border-radius: 10px;
+}
+/* Table Styles for the "matiere-section" */
+.matiere-section {
+    font-size: 1.2rem; /* Augmenter la taille de la police pour l'ensemble de la section */
+    line-height: 1.6; /* Espacement entre les lignes pour améliorer la lisibilité */
+    margin-top: 20px;
+}
+
+.matiere-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.matiere-section th, .matiere-section td {
+    padding: 10px;
+    border: 1px solid black;
+    text-align: left;
+    font-size: 1.6rem;
+}
+
+.matiere-section th {
+    background-color: white;
+    color: #000; 
+    font-weight: bold;
+}
+
+.matiere-section td {
+    background-color: #f9f9f9;
+    color: #000;
+}
+
+#matiere h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--main-color);
+    padding-left: 0; /* Enlève l'espacement par défaut du côté gauche */
+    text-transform: uppercase; 
+    text-align: center;
+}
+

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--font awsome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-2jB6w/Q8PiS5JIl/8p4w/JqENoTaeSk3eFflB1f5ExS8IFCpi7LidOwzbQfv98lt" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style/style.css">
+    <title>Personal Portfolio Website</title>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Amina Gaddour</a>
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="index.html" class="active">Accueil</a>
+            <a href="parcours.html">Parcours</a>
+            <a href="competences.html">Compétences</a>
+            <a href="Expérience.html">Expérience</a>
+            <a href="matiere.html">Matiéres</a>
+            <a href="projects.html">Projets</a>
+            <a href="passions.html">Passions</a>
+            <a href="Quiz.html">Quiz</a>
+            <a href="contact.html">Contact</a>
+            <a href="IIT.html">IIT</a>
+        </nav>
+    </header>
+    <main class="container">
+      <div class="quiz-container">
+        <h1>Quiz </h1>
+        <form id="quizForm">
+          <div class="question">
+            <p>
+              1. Que signifie HTML ?
+            </p>
+            <label>
+              <input type="radio" name="q1" value="Hyper Text Markup Language " class="large-text" /> Hyper Text Markup Language 
+            </label> <br>
+            <label>
+              <input type="radio" name="q1" value="Saturne" class="large-text" /> Home Tool Markup Language
+            </label><br>
+            <label>
+              <input type="radio" name="q1" value="Terre" class="large-text" /> Hyperlink Text Mark Language
+            </label>
+          </div>
+
+          <div class="question">
+            <p>2.Quelle propriété CSS est utilisée pour changer la couleur du texte ?</p>
+            <label>
+              <input type="radio" name="q2" value="color " class="large-text" /> color 
+            </label><br>
+            <label>
+              <input type="radio" name="q2" value="background-color" class="large-text" /> background-color
+            </label><br>
+            <label>
+              <input type="radio" name="q2" value="text-color" class="large-text" />  text-color
+            </label>
+          </div>
+
+          <div class="question">
+            <p>3. Quelle propriété CSS est utilisée pour déterminer l'espacement entre les éléments ?</p>
+            <label>
+              <input type="radio" name="q3" value="margin" class="large-text" /> margin
+            </label><br>
+            <label>
+              <input type="radio" name="q3" value="padding" class="large-text" /> padding
+            </label><br>
+            <label>
+              <input type="radio" name="q3" value="spacing" class="large-text" /> spacing
+            </label>
+          </div>
+
+          <div class="question">
+            <p>4. Quelle propriété CSS est utilisée pour ajouter un fond à un élément ?</p>
+            <label>
+              <input type="radio" name="q4" value="background " class="large-text" />background 
+            </label><br>
+            <label>
+              <input type="radio" name="q4" value="border" class="large-text" /> border
+            </label><br>
+            <label>
+              <input type="radio" name="q4" value="fill" class="large-text" /> fill
+            </label>
+          </div>
+
+          <div class="question">
+            <p>5. Quelle propriété CSS est utilisée pour changer la taille de la police ?</p>
+            <label>
+              <input type="radio" name="q5" value="font-size" class="large-text" />  font-size
+            </label><br>
+            <label>
+              <input type="radio" name="q5" value="text-size" class="large-text" />  text-size
+
+            </label><br>
+            <label>
+              <input type="radio" name="q5" value=" font-scale" class="large-text" />  font-scale
+            </label>
+          </div>
+
+          <div class="question">
+            <p>6. Quelle propriété CSS permet de contrôler l'alignement des éléments ?</p>
+            <label>
+              <input type="radio" name="q6" value="text-align" class="large-text" /> text-align
+            </label><br>
+            <label>
+              <input type="radio" name="q6" value="align-content" class="large-text" />  align-content
+            </label><br>
+            <label>
+              <input type="radio" name="q6" value="align-text" class="large-text" />  align-text
+            </label>
+          </div>
+
+          <div class="question">
+            <p>
+              7.Quelle propriété CSS est utilisée pour ajuster l'espacement entre les lettres d'un texte ?
+            </p>
+            <label>
+              <input type="radio" name="q7" value="word-spacing" class="large-text" />  word-spacing
+            </label><br>
+            <label>
+              <input type="radio" name="q7" value="letter-spacing" class="large-text" /> letter-spacing
+            </label><br>
+            <label>
+              <input type="radio" name="q7" value=" line-spacing" class="large-text" />  line-spacing
+            </label>
+          </div>
+
+          <div class="question">
+            <p>8. Quelle propriété CSS est utilisée pour définir la largeur d’un élément ?</p>
+            <label>
+              <input type="radio" name="q8" value=" width" class="large-text" />  width
+            </label><br>
+            <label>
+              <input type="radio" name="q8" value="height" class="large-text" /> height
+            </label><br>
+            <label>
+              <input type="radio" name="q8" value=" length" class="large-text" />  length
+            </label>
+          </div>
+
+          <div class="question">
+            <p>
+              9. Quelle propriété CSS est utilisée pour rendre un texte en italique ?
+            </p>
+            <label>
+              <input type="radio" name="q9" value="font-style: italic" class="large-text" /> font-style: italic
+            </label><br>
+            <label>
+              <input type="radio" name="q9" value="font-weight: italic" class="large-text" /> font-weight: italic
+            </label><br>
+            <label>
+              <input type="radio" name="q9" value="text-style: italic;" class="large-text" /> text-style: italic;
+            </label>
+          </div>
+
+          <div class="question">
+            <p>10. Quelle propriété CSS est utilisée pour ajouter une ombre à un élément ?</p>
+            <label>
+              <input type="radio" name="q10" value="box-shadow" class="large-text" /> box-shadow
+            </label><br>
+            <label>
+              <input type="radio" name="q10" value="text-shadow" class="large-text" /> text-shadow
+            </label><br>
+            <label>
+              <input type="radio" name="q10" value="shadow" class="large-text" /> shadow
+            </label>
+          </div>
+
+          <div class="question">
+            <p>
+                Quelle propriété CSS est utilisée pour contrôler la transparence d’un élément ?
+            </p>
+            <label>
+              <input type="radio" name="q11" value="opacity" class="large-text" />  opacity
+            </label><br>
+            <label>
+              <input type="radio" name="q11" value="visibility" class="large-text" />  visibility
+            </label><br>
+            <label>
+              <input type="radio" name="q11" value="transparency" class="large-text" /> transparency
+            </label><br>
+          </div>
+
+          <div class="question">
+            <p>12. Quelle propriété CSS permet de contrôler l’arrondi des coins d’un élément ?</p>
+            <label>
+              <input type="radio" name="q12" value="border-radius" class="large-text" /> border-radius
+            </label><br>
+            <label>
+              <input type="radio" name="q12" value="corner-radius" class="large-text" /> corner-radius
+            </label>
+          </div>
+          <button>Soumettre</button>
+
+        </form>
+    </div>
+    <div id="result" class="result">
+        <h3>Your Score: <span id="score"></span></h3>
+        <h3>Correct Answers:</h3>
+        <ul id="correctAnswers"></ul>
+      </div>
+  </main>
+  <script>
+
+    const correctAnswers = {
+        q1: "Hyper Text Markup Language ",
+        q2: "color",
+        q3: "margin",
+        q4: "background",
+        q5: "Voie Lactée",
+        q6: "Mercure",
+        q7: "letter-spacing",
+        q8: "width",
+        q9: "font-style: italic",
+        q10: "box-shadow",
+        q11: "opacity",
+        q12: "border-radius",
+    };
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("quizForm");
+        const resultContainer = document.getElementById("result");
+        const scoreElement = document.getElementById("score");
+        const answersList = document.getElementById("correctAnswers");
+
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            let score = 0;
+            let totalQuestions = Object.keys(correctAnswers).length;
+            answersList.innerHTML = ""
+
+            for (let [question, correctAnswer] of Object.entries(correctAnswers)) {
+                const userAnswer = form.elements[question]?.value;
+                const isCorrect = userAnswer === correctAnswer;
+
+                const listItem = document.createElement("li");
+                listItem.innerHTML = isCorrect
+                    ? `<strong ">${question}:</strong> <span style="color:green;" >Correct!</span> (${correctAnswer})`
+                    : `<strong ">${question}:</strong> <span style="color:red;" >Incorrect.</span> Votre réponse : <b>${userAnswer || "aucune"}</b>, correcte : <b>${correctAnswer}</b>`;
+                
+                answersList.appendChild(listItem);
+
+                if (isCorrect) score++;
+            }
+
+            scoreElement.textContent = `${score} / ${totalQuestions}`;
+            resultContainer.style.display = "block";
+        });
+    });
+</script>
+</body>
+</html>
+
+
+  
